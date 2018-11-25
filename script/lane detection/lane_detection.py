@@ -2,7 +2,7 @@ import numpy as np
 import cv2
 from Line import Line
 
-x = 10
+
 
 
 def grayscale(img):
@@ -176,7 +176,7 @@ def color_frame_pipeline(frames, solid_lines=True, temporal_smoothing=True):
     Entry point for lane detection pipeline. Takes as input a list of frames (RGB) and returns an image (RGB)
     with overlaid the inferred road lanes. Eventually, len(frames)==1 in the case of a single image.
     """
-    ++x 
+    
     is_videoclip = len(frames) > 0
 
     img_h, img_w = frames[0].shape[0], frames[0].shape[1]
