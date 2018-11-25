@@ -4,14 +4,17 @@ import sys, time
 import numpy as np
 #from scipy.ndimage import filters
 import cv2
+
+
+
 import roslib
 import rospy
 from sensor_msgs.msg import CompressedImage
 from std_msgs.msg import Float32
-import traffic_detect as TD
 
 
-from main3_stable import Detect
+
+from detect_all import Detect
 #import main1_stable as Detect
 ###########################################################################
 class image_feature:
