@@ -1,19 +1,25 @@
 #! usr/bin/env python3
+import sys
+sys.path.append('lane detection/')
+sys.path.append('lane detection/')
+sys.path.append('traffic detection/')
+sys.path.append('old_version/')
+sys.path.append('car control/')
+
 from time import time
 import numpy as np
 import cv2
 import matplotlib.pyplot as plt
-import lane_detection as LD
-from Line import Line
 
 import rospy
 import math
 from sensor_msgs.msg import CompressedImage
 from std_msgs.msg import Float32
 
-import traffic_detect as TD
+import lane_detection as LD
+from Line import Line
 from PID import PID
-#from MPC import MPC
+import traffic_detect as TD
 
 i = 1
 def rad2deg(rad):

@@ -1,4 +1,9 @@
 #! usr/bin/env python3
+import sys
+sys.path.append('../lane detection/')
+sys.path.append('../traffic detection/')
+sys.path.append('../old_version/')
+sys.path.append('../car control/')
 from time import time
 import numpy as np
 import cv2
@@ -161,7 +166,7 @@ def main():
     rospy.init_node('test')
     s = time()
     # img = cv2.imread('Image/right3.')
-    img = cv2.imread('Image/right3.png')
+    img = cv2.imread('../Image/right3.png')
     detect = Detect(img)
     detect.drive()
     e = time()
