@@ -1,10 +1,6 @@
-#! usr/bin/env python3
+#! usr/bin/env python
 import sys
-sys.path.append('lane detection/')
-sys.path.append('lane detection/')
-sys.path.append('traffic detection/')
-sys.path.append('old_version/')
-sys.path.append('car control/')
+
 
 from time import time
 import numpy as np
@@ -35,7 +31,7 @@ class Detect:
         self.cte = 0
         self.center_line = Line(self.WIDTH/2,self.HEIGHT,self.WIDTH/2,self.HEIGHT/2)
         self.angle_steer = 0
-        self.speed = 10
+        self.speed = 40
         self.dt = 0.1
         self.yaw = 90   #  phi(center,ox)
 
@@ -120,10 +116,14 @@ class Detect:
         print(self.speed,'speed')
         ### ----------------Use PID--------------------
         
-        kp = .52
-        ki = 0.03
-        kd = 0.003
-    
+        kp = .53
+        ki = 0.005
+        kd = 0.0003
+        """40km/h"""
+
+        # kp = .92
+        # ki = 0.001
+        # kd = 0.5
             
         
             # if (self.DIRECTION == 'right'):
